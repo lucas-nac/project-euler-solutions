@@ -1,4 +1,4 @@
-namespace project_euler_solutions
+namespace ProjectEulerSolutions.Solutions
 {
     public interface ISolution
     {

@@ -1,8 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace project_euler_solutions.common
+namespace ProjectEulerSolutions.Commons
 {
     public static class PrimeNumbers
     {

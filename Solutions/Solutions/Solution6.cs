@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace project_euler_solutions.solutions
+namespace ProjectEulerSolutions.Solutions
 {
     public class Solution6 : ISolution
     {

@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 
-namespace project_euler_solutions
+namespace ProjectEulerSolutions.Solutions
 {
     class Program
     {

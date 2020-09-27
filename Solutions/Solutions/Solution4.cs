@@ -1,4 +1,4 @@
-namespace project_euler_solutions.solutions
+namespace ProjectEulerSolutions.Solutions
 {
     public class Solution4 : ISolution
     {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 
@@ -24,7 +25,11 @@ namespace project_euler_solutions
                 return;
             }
 
+            var sw = new Stopwatch();
+            sw.Start();
             Console.WriteLine(((ISolution)Activator.CreateInstance(solution)).GetSolution());
+            sw.Stop();
+            Console.WriteLine($"Solved in {sw.Elapsed.ToString()} seconds.");
         }
     }
 }

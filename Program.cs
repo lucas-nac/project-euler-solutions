@@ -29,7 +29,7 @@ namespace project_euler_solutions
             sw.Start();
             Console.WriteLine(((ISolution)Activator.CreateInstance(solution)).GetSolution());
             sw.Stop();
-            Console.WriteLine($"Solved in {sw.Elapsed.ToString()} seconds.");
+            Console.WriteLine($"Solved in {sw.Elapsed.ToString()}");
         }
     }
 }

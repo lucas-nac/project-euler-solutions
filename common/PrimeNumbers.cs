@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -5,8 +6,11 @@ namespace project_euler_solutions.common
 {
     public static class PrimeNumbers
     {
+        private static Dictionary<long, bool> numbers = new Dictionary<long, bool>();
+
         public static IEnumerable<long> GetPrimeNumbersBelow(long n) {
-            var numbers = new Dictionary<long, bool>();
+            var highestCalculatedNumber = numbers.Any() ? (long)numbers?.Max(kv => kv.Key) : 0;
+
             if (n >= 2) {
                 numbers[2] = true;
 
@@ -18,11 +22,29 @@ namespace project_euler_solutions.common
                             numbers[multiple] = false;
                             multiple += i;
                         }
+                    } else if (numbers[i]) {
+                        var multiple = ((highestCalculatedNumber/i)*i)+i;
+                        while (multiple <= n) {
+                            numbers[multiple] = false;
+                            multiple += i;
+                        }
                     }
                 }
             }            
 
             return numbers.Where(kv => kv.Value).Select(kv => kv.Key);
+        }
+
+        public static long GetNthPrimeNumber(int i) {
+            var max = i;
+            var primeNumbers = GetPrimeNumbersBelow(max);
+
+            while (primeNumbers.Count() < i) {
+                max += i;
+                primeNumbers = GetPrimeNumbersBelow(max);
+            }
+
+            return primeNumbers.ElementAt(i-1);
         }
     }
 }

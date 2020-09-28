@@ -1,6 +1,4 @@
-using System;
 using System.Linq;
-using ProjectEulerSolutions.Solutions;
 
 namespace ProjectEulerSolutions.Solutions
 {

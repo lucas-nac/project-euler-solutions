@@ -17,5 +17,11 @@ namespace ProjectEulerSolutions.Tests
         {
             Assert.Equal(7919, PrimeNumbers.GetNthPrimeNumber(1000));
         }
+
+        [Fact]
+        public void GetFactors()
+        {
+            Assert.Equal(6, Factors.GetFactors(1000).Count());
+        }
     }
 }

@@ -80,7 +80,13 @@ namespace ProjectEulerSolutions.Tests
         [Fact]
         public void Solution13()
         {
-            Assert.Equal("5537376230", new Solution12().GetSolution());
+            Assert.Equal("5537376230", new Solution13().GetSolution());
+        }
+
+        [Fact]
+        public void Solution14()
+        {
+            Assert.Equal("837799", new Solution14().GetSolution());
         }
     }
 }

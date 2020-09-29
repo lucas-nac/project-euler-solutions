@@ -19,9 +19,9 @@ namespace ProjectEulerSolutions.Tests
         }
 
         [Fact]
-        public void GetFactors()
+        public void GetPrimeFactors()
         {
-            Assert.Equal(6, Factors.GetFactors(1000).Count());
+            Assert.Equal(6, Factors.GetPrimeFactors(1000).Count());
         }
     }
 }

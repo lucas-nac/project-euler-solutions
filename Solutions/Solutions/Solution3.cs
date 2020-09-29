@@ -7,7 +7,7 @@ namespace ProjectEulerSolutions.Solutions
     {        
         public string GetSolution()
         {
-            return Factors.GetFactors(600851475143).Max().ToString();
+            return Factors.GetPrimeFactors(600851475143).Max().ToString();
         }
     }
 }

@@ -14,5 +14,13 @@ namespace ProjectEulerSolutions.Commons
             }
             return new List<long> { n };
         }
+
+        public static IEnumerable<long> GetProperDivisors(long n) {
+            for (long i = 1; i <= n/2; i++) {
+                if (n % i == 0) {
+                    yield return i;
+                }
+            }
+        }
     }
 }

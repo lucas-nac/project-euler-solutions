@@ -16,7 +16,6 @@ namespace ProjectEulerSolutions.Solutions
                 var otherDivisorsSum = Factors.GetProperDivisors(divisorsSum).Sum();
                 
                 if (i != divisorsSum && otherDivisorsSum < 10000 && otherDivisorsSum == i) {
-                    Console.WriteLine(i + " " + divisorsSum);
                     totalSum += i;
                 }
             }

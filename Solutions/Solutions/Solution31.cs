@@ -23,8 +23,7 @@ namespace ProjectEulerSolutions.Solutions
                 }
             }
 
-            return ways;
-            // return i == 0 ? 1 : coins.Sum(n => i - n >= 0 ? GetPossibleWays(i - n) : 0);            
+            return ways;         
         }
     }    
 }

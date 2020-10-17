@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using Solutions.Commons;
 
 namespace ProjectEulerSolutions.Solutions
 {
@@ -28,45 +29,6 @@ namespace ProjectEulerSolutions.Solutions
             var triangle = new Triangle(lines);
 
             return triangle.GetMaximumSum().ToString();
-        }
-
-        protected class Triangle
-        {
-            private TriangleNumber root;
-
-            public Triangle(string[] lines) {
-                root = new TriangleNumber { Value = int.Parse(lines[0]) };
-
-                var previousLevel = new TriangleNumber[] { root };
-                foreach (var line in lines.Skip(1))
-                {
-                    var numbers = line.Split(' ').Select(x => int.Parse(x)).ToArray();
-                    var currentLevel = numbers.Select(n => new TriangleNumber() { Value = n}).ToArray();
-
-                    for (int i = 0; i < currentLevel.Length; i++)
-                    {
-                        if (i != currentLevel.Length - 1) previousLevel[i].Left = currentLevel[i];
-                        if (i != 0) previousLevel[i - 1].Right = currentLevel[i];
-                    }
-
-                    previousLevel = currentLevel;
-                }
-            }
-
-            public long GetMaximumSum() {
-                return root.GetMaximumSum();
-            }
-        }
-
-        protected class TriangleNumber
-        {
-            public int Value { get; set; }
-            public TriangleNumber Left { get; set; }
-            public TriangleNumber Right { get; set; }
-
-            public long GetMaximumSum() {
-                return Left == null || Right == null ? Value : Value + Math.Max(Left.GetMaximumSum(), Right.GetMaximumSum());
-            }
         }
     }    
 }

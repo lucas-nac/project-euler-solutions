@@ -216,6 +216,12 @@ namespace ProjectEulerSolutions.Tests
         }
 
         [Fact]
+        public void Solution48()
+        {
+            Assert.Equal("9110846700", new Solution48().GetSolution());
+        }
+
+        [Fact]
         public void Solution67()
         {
             Assert.Equal("872187", new Solution67().GetSolution());

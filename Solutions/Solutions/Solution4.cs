@@ -1,3 +1,5 @@
+using Solutions.Commons;
+
 namespace ProjectEulerSolutions.Solutions
 {
     public class Solution4 : ISolution
@@ -9,7 +11,7 @@ namespace ProjectEulerSolutions.Solutions
                 if (i*i < maxPalindrome) break;
                 for (int j = i; j > 100; j--) {
                     var product = i*j;
-                    if (IsPalindrome(product) && product > maxPalindrome) {
+                    if (Palindromes.IsPalindrome(product) && product > maxPalindrome) {
                         maxPalindrome = product;
                     } 
                 }
@@ -17,15 +19,6 @@ namespace ProjectEulerSolutions.Solutions
             return maxPalindrome.ToString();
         }
 
-        private bool IsPalindrome(int n) {
-            var number = n.ToString();
-
-            for (int i = 0; i <= number.Length/2; i++) {
-                var opposedIndex = number.Length-1-i;
-                if (number[i] != number[opposedIndex]) return false;
-            }
-
-            return true;
-        }
+        
     }
 }

@@ -48,5 +48,12 @@ namespace ProjectEulerSolutions.Tests
 
             Assert.Equal(1074, new Triangle(lines).GetMaximumSum());
         }
+
+        [Fact]
+        public void IsPalindrome()
+        {
+            Assert.True(Palindromes.IsPalindrome(123454321));
+            Assert.False(Palindromes.IsPalindrome(1223454321));
+        }
     }
 }

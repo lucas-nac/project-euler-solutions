@@ -130,7 +130,7 @@ namespace ProjectEulerSolutions.Tests
         {
             Assert.Equal("31626", new Solution21().GetSolution());
         }
-        
+
         [Fact]
         public void Solution22()
         {
@@ -204,6 +204,12 @@ namespace ProjectEulerSolutions.Tests
         }
 
         [Fact]
+        public void Solution36()
+        {
+            Assert.Equal("7273", new Solution67().GetSolution());
+        }
+
+        [Fact]
         public void Solution40()
         {
             Assert.Equal("210", new Solution40().GetSolution());
@@ -212,7 +218,7 @@ namespace ProjectEulerSolutions.Tests
         [Fact]
         public void Solution67()
         {
-            Assert.Equal("7273", new Solution67().GetSolution());
+            Assert.Equal("872187", new Solution67().GetSolution());
         }
     }
 }

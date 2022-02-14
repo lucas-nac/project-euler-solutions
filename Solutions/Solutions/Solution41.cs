@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using ProjectEulerSolutions.Commons;
+using Solutions.Commons;
 
 namespace ProjectEulerSolutions.Solutions
 {
@@ -13,26 +14,12 @@ namespace ProjectEulerSolutions.Solutions
         {
             foreach (var n in primeNumbers)
             {
-                if (!isPandigital(n)) continue;
+                var nString = n.ToString();
+                if (!PandigitalNumbers.IsPandigital(nString)) continue;
                 return n.ToString();
             }
 
             return string.Empty;
-        }
-
-        private static bool isPandigital(long n)
-        {
-            var nString = n.ToString();
-
-            if (nString.Contains('0')) return false;
-
-            for (int i = 1; i <= nString.Length; i++)
-            {
-                var c = '0' + i;
-                if (nString.Count(d => d == c) != 1) return false;
-            }
-
-            return true;
         }
     }    
 }

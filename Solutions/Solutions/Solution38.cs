@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Solutions.Commons;
 
 namespace ProjectEulerSolutions.Solutions
 {
@@ -20,7 +21,7 @@ namespace ProjectEulerSolutions.Solutions
                     m++;
                 }
 
-                if (!number.Contains('0') && number.Length == 9 && number.Distinct().Count() == 9)
+                if (PandigitalNumbers.IsPandigital(number))
                 {
                     pandigitals.Add(Convert.ToInt64(number));
                 }

@@ -1,5 +1,4 @@
-using System;
-using System.Linq;
+using Solutions.Commons;
 
 namespace ProjectEulerSolutions.Solutions
 {
@@ -12,7 +11,7 @@ namespace ProjectEulerSolutions.Solutions
             {
                 var t = n * (2*n - 1);
 
-                if (isPentagonal(t))
+                if (PentagonalNumbers.IsPentagonal(t))
                 {
                     return t.ToString();
                 }
@@ -21,10 +20,6 @@ namespace ProjectEulerSolutions.Solutions
             }
         }
         
-        private static bool isPentagonal(long n)
-        {
-            var p = (Math.Sqrt(1 + 24*n) + 1) / 6;
-            return p % 1 == 0;
-        }
+        
     }    
 }

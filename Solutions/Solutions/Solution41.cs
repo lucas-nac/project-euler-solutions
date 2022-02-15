@@ -15,7 +15,7 @@ namespace ProjectEulerSolutions.Solutions
             foreach (var n in primeNumbers)
             {
                 var nString = n.ToString();
-                if (!PandigitalNumbers.IsPandigital(nString)) continue;
+                if (!PandigitalNumbers.IsPandigital(nString, false)) continue;
                 return n.ToString();
             }
 

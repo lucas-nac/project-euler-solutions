@@ -21,7 +21,7 @@ namespace ProjectEulerSolutions.Solutions
                     m++;
                 }
 
-                if (PandigitalNumbers.IsPandigital(number))
+                if (PandigitalNumbers.IsPandigital(number, false))
                 {
                     pandigitals.Add(Convert.ToInt64(number));
                 }

@@ -2,12 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using ProjectEulerSolutions.Commons;
+using Solutions.Commons;
 
 namespace ProjectEulerSolutions.Solutions
 {
     public class Solution51 : ISolution
     {
-        private static IList<IGrouping<int, long>> primeNumbersByDigits = PrimeNumbers.GetPrimeNumbersBelow(1000000).GroupBy(p => p.ToString().Count()).Where(d => d.Key >= 2).ToList();
+        private static IList<IGrouping<int, long>> primeNumbersByDigits = PrimeNumbers.GetPrimeNumbersBelow(1000000).GroupBy(p => p.CountDigits()).Where(d => d.Key >= 2).ToList();
         
         public string GetSolution()
         {

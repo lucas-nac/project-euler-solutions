@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Numerics;
+using Solutions.Commons;
 
 namespace ProjectEulerSolutions.Solutions
 {
@@ -19,7 +20,7 @@ namespace ProjectEulerSolutions.Solutions
                 denominator = numerator + denominator;
                 numerator = newNumerator;
 
-                if (numerator.ToString().Count() > denominator.ToString().Count()) count++;
+                if (numerator.CountDigits() > denominator.CountDigits()) count++;
             }
 
             return count.ToString();

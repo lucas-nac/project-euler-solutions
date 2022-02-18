@@ -28,7 +28,7 @@ namespace ProjectEulerSolutions.Solutions
 
                 if (i.ToString().Distinct().Count() == 1)
                 {
-                    i = (int)(9*Math.Pow(10, i.ToString().Count())) - 1;
+                    i = (int)(9*Math.Pow(10, i.CountDigits())) - 1;
                 }
             }
 

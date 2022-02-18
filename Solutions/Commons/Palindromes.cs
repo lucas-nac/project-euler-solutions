@@ -1,7 +1,15 @@
+using System.Numerics;
+
 namespace Solutions.Commons
 {
     public static class Palindromes
     {
+        public static bool IsPalindrome(BigInteger n) {
+            var number = n.ToString();
+
+            return IsPalindrome(number);
+        }
+
         public static bool IsPalindrome(int n) {
             var number = n.ToString();
 

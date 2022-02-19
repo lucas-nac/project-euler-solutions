@@ -14,7 +14,7 @@ namespace ProjectEulerSolutions.Solutions
         {
             foreach (var byDigits in primeNumbersByDigits)
             {
-                var variations = getVariations(byDigits.Key).SkipLast(1).Skip(1);
+                var variations = Combinatorics.GetVariations("X0", byDigits.Key).SkipLast(1).Skip(1);
                 var primes = byDigits.Select(p => p.ToString()).ToList();
 
                 var min = int.MaxValue;
@@ -34,20 +34,6 @@ namespace ProjectEulerSolutions.Solutions
             }
 
             return "";
-        }
-
-        private static IList<string> getVariations(int n)
-        {
-            if (n == 1) return new List<string>() { "X", "0" };
-
-            var variations = new List<string>();
-            foreach (var v in getVariations(n-1))
-            {
-                variations.Add("X"+v);
-                variations.Add("0"+v);
-            }
-
-            return variations.ToList();
         }
 
         private static string maskIfValid(string number, string mask)

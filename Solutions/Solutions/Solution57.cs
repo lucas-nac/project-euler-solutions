@@ -25,5 +25,5 @@ namespace ProjectEulerSolutions.Solutions
 
             return count.ToString();
         }
-    }    
+    }
 }
